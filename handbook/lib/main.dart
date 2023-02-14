@@ -1,0 +1,223 @@
+import 'package:flutter/material.dart';
+import 'navBar.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      home: const MyHomePage(title: 'Pregnant Women\'s Handbook'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+
+  @override
+  Widget build(BuildContext context) {
+    double width=MediaQuery.of(context).size.width;
+    double height=MediaQuery.of(context).size.height;
+
+    return Scaffold(
+      drawer: NavBar(),
+
+      appBar: AppBar(
+        title: Text(widget.title),
+        centerTitle: true,
+      ),
+
+
+      body: Container(
+        width: width,
+        height: height,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment:MainAxisAlignment.center,
+            children: [
+              Container(
+                width: width,
+                height: height *0.1,
+                alignment: Alignment.center,
+                child: Text(
+                  'Digital Pregnant Women’s Handbook',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14,),
+
+                ),
+              ),
+
+              SizedBox(height: 5.0,),
+
+              OutlinedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NavBar()),
+                  );
+                },
+                child: Text(
+                  'ABOUT PREGNANT WOMEN’S HANDBOOK',
+                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  
+                ),
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                            side: BorderSide(color: Colors.red),
+                        )
+                    )
+                ),
+
+              ),
+              SizedBox(height: 25.0,),
+
+
+
+
+              Container(
+                color: Colors.deepPurple,
+                height: 180,
+                padding: EdgeInsets.all(16),
+
+
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+
+                      children: [
+                        Image.asset(
+                          'assets/Images/pregnancy.png',
+                          width: 80,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                        SizedBox(height: 16),
+                        Text(
+                          'PREGNANCY \n TRACKER',
+                          style: TextStyle(
+                              fontSize: 8,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Images/book.png',
+                          width: 100,
+                          height: 100,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'EDUCATE ME',
+                          style: TextStyle(fontSize: 8,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Images/advice.png',
+                          width: 100,
+                          height: 100,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'MY DOCTOR',
+                          style: TextStyle(fontSize: 8,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,),
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+                ,
+              ),
+
+
+              SizedBox(height: 50,),
+
+              OutlinedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NavBar()),
+                  );
+                },
+                child: Text(
+                  'START MY PREGNANCY HANDBOOK',
+                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+
+                ),
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                          side: BorderSide(color: Colors.red),
+                        )
+                    )
+                ),
+
+              ),
+              SizedBox(height: 50,),
+
+              OutlinedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NavBar()),
+                  );
+                },
+                child: Text(
+                  'MY CALENDAR',
+                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+
+                ),
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                          side: BorderSide(color: Colors.red),
+                        )
+                    )
+                ),
+
+              ),
+
+        ]),
+      ),
+
+    ));
+  }
+
+}
