@@ -161,7 +161,7 @@ class DietPage extends StatelessWidget {
 
                   children: [
                     Image.asset(
-                      'assets/Images/exercise.png',
+                      'assets/Images/meditation.png',
                       width: 100,
                       height: 100,
                       fit: BoxFit.cover,

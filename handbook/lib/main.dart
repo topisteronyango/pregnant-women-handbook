@@ -5,6 +5,7 @@ import 'doctor.dart';
 import 'educate.dart';
 import 'symptom.dart';
 import 'diet.dart';
+import 'exercise.dart';
 
 void main() {
   runApp(const MyApp());
@@ -267,6 +268,31 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text(
                   'SPECIAL DIET FOR PREGNANCY',
+                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+
+                ),
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                          side: BorderSide(color: Colors.red),
+                        )
+                    )
+                ),
+
+              ),
+              SizedBox(height: 20,),
+
+              OutlinedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ExercisePage()),
+                  );
+                },
+                child: Text(
+                  'MY EXERCISES',
                   style: TextStyle(fontSize: 16.0, color: Colors.white),
 
                 ),

@@ -73,16 +73,17 @@ class _CalendarPageState extends State<CalendarPage> {
               },
             ),
 
-            Container(
-              width: width,
-              height: height *0.1,
-              alignment: Alignment.center,
-              child: Text(
-                'Don\'t stress at all!!!',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,),
-
-              ),
-            ),
+            // Container(
+            //   width: width,
+            //   height: height *0.1,
+            //   alignment: Alignment.center,
+            //   child: Text(
+            //     'Don\'t stress at all!!!',
+            //     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,),
+            //
+            //   ),
+            // ),
+            SizedBox(height: 68,),
 
             Container(
               color: Colors.deepPurple,
