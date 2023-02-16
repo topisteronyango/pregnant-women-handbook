@@ -7,15 +7,23 @@ void main() => runApp(CalendarPage());
 class CalendarPage extends StatefulWidget {
   @override
   _CalendarPageState createState() => _CalendarPageState();
+
 }
 
 class _CalendarPageState extends State<CalendarPage> {
+
   CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _focusedDay = DateTime.now();
   DateTime _firstDay = DateTime(2023, 1, 1);
   DateTime _lastDay = DateTime(2023, 12, 31);
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode.toggledOff;
   late DateTime _selectedDay;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedDay = DateTime.now();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,16 +81,7 @@ class _CalendarPageState extends State<CalendarPage> {
               },
             ),
 
-            // Container(
-            //   width: width,
-            //   height: height *0.1,
-            //   alignment: Alignment.center,
-            //   child: Text(
-            //     'Don\'t stress at all!!!',
-            //     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,),
-            //
-            //   ),
-            // ),
+            
             SizedBox(height: 68,),
 
             Container(
@@ -154,7 +153,7 @@ class _CalendarPageState extends State<CalendarPage> {
 
           ],
         ),
-      ),
-    );
-  }
+      ),
+    );
+  }
 }
