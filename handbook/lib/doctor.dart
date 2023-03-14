@@ -187,7 +187,7 @@ class MyAppointmentsPage extends StatelessWidget {
         ],
 
 
-      ),
-    );
-  }
+     ),
+);
+}
 }

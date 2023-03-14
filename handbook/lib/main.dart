@@ -1,343 +1,52 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'navBar.dart';
-import 'calendar.dart';
-import 'doctor.dart';
-import 'educate.dart';
-import 'symptom.dart';
-import 'diet.dart';
-import 'exercise.dart';
+import 'package:hexcolor/hexcolor.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+// void main() {
+//   runApp(WelcomeApp());
+// }
+
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(WelcomeApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class WelcomeApp extends StatelessWidget {
+  //
+  // Color _primaryColor = HexColor('#DC54FE');
+  // Color _accentColor = HexColor('#8A02AE');
+
+  // // Design color
+  // Color _primaryColor= HexColor('#FFC867');
+  // Color _accentColor= HexColor('#FF3CBD');
+
+  // Our Logo Color
+  // Color _primaryColor= HexColor('#D44CF6');
+  // Color _accentColor= HexColor('#5E18C8');
+
+  // Our Logo Blue Color
+  // Color _primaryColor= HexColor('#651BD2');
+  Color _accentColor= HexColor('#320181');
+  //Violet Color
+  Color _primaryColor= HexColor('#710193');
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-
+      title: 'Flutter Login UI',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primaryColor: _primaryColor,
+        accentColor: _accentColor,
+        scaffoldBackgroundColor: Colors.grey.shade100,
+        primarySwatch: Colors.grey,
       ),
-      home: const MyHomePage(title: 'Pregnant Women\'s Handbook'),
+      home: SplashScreen(title: 'Flutter Login UI'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-
-  @override
-  Widget build(BuildContext context) {
-    double width=MediaQuery.of(context).size.width;
-    double height=MediaQuery.of(context).size.height;
-
-    return Scaffold(
-      drawer: NavBar(),
-
-      appBar: AppBar(
-        title: Text(widget.title),
-        centerTitle: true,
-      ),
-
-
-      body: Container(
-        width: width,
-        height: height,
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment:MainAxisAlignment.center,
-            children: [
-              Container(
-                width: width,
-                height: height *0.08,
-                alignment: Alignment.center,
-                child: Text(
-                  'Digital Pregnant Women’s Handbook',
-
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14,),
-
-                ),
-              ),
-              Container(
-                width: width,
-                // height: height *0.1,
-                alignment: Alignment.center,
-                child: Text(
-                  'Click on each button to get access to our services',
-
-                  // style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14,),
-
-                ),
-              ),
-
-              SizedBox(height: 5.0,),
-
-              OutlinedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => NavBar()),
-                  );
-                },
-                child: Text(
-                  'ABOUT PREGNANT WOMEN’S HANDBOOK',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-                  
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.red),
-                        )
-                    )
-                ),
-
-              ),
-              SizedBox(height: 25.0,),
-
-              OutlinedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SymptomPage()),
-                  );
-                },
-                child: Text(
-                  'KNOW PREGNANCY SYMPTOMS',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                          side: BorderSide(color: Colors.red),
-                        )
-                    )
-                ),
-
-              ),
-
-
-
-
-
-
-              // Container(
-              //   color: Colors.deepPurple,
-              //   height: 180,
-              //   padding: EdgeInsets.all(16),
-              //
-              //
-              //
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //     children: [
-              //       Column(
-              //
-              //         children: [
-              //           Image.asset(
-              //             'assets/Images/pregnancy.png',
-              //             width: 80,
-              //             height: 100,
-              //             fit: BoxFit.cover,
-              //           ),
-              //           SizedBox(height: 16),
-              //           Text(
-              //             'PREGNANCY \n TRACKER',
-              //             style: TextStyle(
-              //                 fontSize: 8,
-              //                 fontWeight: FontWeight.bold,
-              //                 color: Colors.white),
-              //           ),
-              //         ],
-              //       ),
-              //       Column(
-              //         children: [
-              //           Image.asset(
-              //             'assets/Images/book.png',
-              //             width: 100,
-              //             height: 100,
-              //           ),
-              //           SizedBox(height: 8),
-              //           Text(
-              //             'EDUCATE ME',
-              //             style: TextStyle(fontSize: 8,
-              //                 fontWeight: FontWeight.bold,
-              //                 color: Colors.white,),
-              //           ),
-              //         ],
-              //       ),
-              //       Column(
-              //         children: [
-              //           Image.asset(
-              //             'assets/Images/advice.png',
-              //             width: 100,
-              //             height: 100,
-              //           ),
-              //           SizedBox(height: 8),
-              //           Text(
-              //             'MY DOCTOR',
-              //             style: TextStyle(fontSize: 8,
-              //                 fontWeight: FontWeight.bold,
-              //                 color: Colors.white,),
-              //           ),
-              //         ],
-              //       ),
-              //     ],
-              //   )
-              //   ,
-              // ),
-
-
-              SizedBox(height: 20,),
-
-              OutlinedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MyAppointmentsPage()),
-                  );
-                },
-                child: Text(
-                  'BOOK APPOINTMENT WITH DOCTOR',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                          side: BorderSide(color: Colors.red),
-                        )
-                    )
-                ),
-
-              ),
-              SizedBox(height: 20,),
-
-              OutlinedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => EducateMePage()),
-                  );
-                },
-                child: Text(
-                  'GET PREGNANCY FREE EDUCATION',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                          side: BorderSide(color: Colors.red),
-                        )
-                    )
-                ),
-
-              ),
-              SizedBox(height: 20,),
-
-              OutlinedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => DietPage()),
-                  );
-                },
-                child: Text(
-                  'SPECIAL DIET FOR PREGNANCY',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                          side: BorderSide(color: Colors.red),
-                        )
-                    )
-                ),
-
-              ),
-              SizedBox(height: 20,),
-
-              OutlinedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ExercisePage()),
-                  );
-                },
-                child: Text(
-                  'MY EXERCISES',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                          side: BorderSide(color: Colors.red),
-                        )
-                    )
-                ),
-
-              ),
-              SizedBox(height: 20,),
-
-
-              OutlinedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => CalendarPage()),
-                  );
-                },
-                child: Text(
-                  'MY CALENDAR',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                          side: BorderSide(color: Colors.red),
-                        )
-                    )
-                ),
-
-              ),
-
-        ]),
-      ),
-
-    ));
-  }
-
-}
