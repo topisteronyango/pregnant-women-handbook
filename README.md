@@ -13,6 +13,6 @@ Some authenticated user on firebase
 ![image](https://user-images.githubusercontent.com/90452846/225414681-eb7a8dcf-57d5-4734-a374-ba486dfdcd81.png)
 
 **Developers**
-Topister
-Lievin
+Topister O,
+Lievin N,
 Igor
