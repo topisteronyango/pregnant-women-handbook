@@ -120,7 +120,7 @@ class MyAppointmentsPage extends StatelessWidget {
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'PREGNANCY \n TRACKER',
+                      'SOCIAL  \n SUPPORT',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,

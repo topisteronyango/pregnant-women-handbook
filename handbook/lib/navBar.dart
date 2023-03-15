@@ -1,11 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:handbook/homePage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'calendar.dart';
+import 'doctor.dart';
+import 'educate.dart';
+// import 'healthSafety.dart';
+import 'symptom.dart';
+import 'diet.dart';
+import 'exercise.dart';
+import 'socialSupport.dart';
+// import 'prenatal.dart';
+// import 'postnatal.dart';
+
 
 class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Drawer(
       child: ListView(
         children: [
+
+// MY DOCTOR PAGE LINK
           ListTile(
             leading: Image.asset(
               'assets/Images/advice.png',
@@ -13,8 +29,16 @@ class NavBar extends StatelessWidget {
               width: 20,
             ),
             title: Text('My Doctor'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context) => MyAppointmentsPage()),
+              );
+            },
           ),
+
+// PREGNANCY TRACKER PAGE LINK (SYMPTOMS)
+
           ListTile(
             leading: Image.asset(
               'assets/Images/pregnancy.png',
@@ -22,8 +46,16 @@ class NavBar extends StatelessWidget {
               width: 20,
             ),
             title: Text('Pregnancy Tracker'),
-            onTap: () => null,
+            onTap: ()  {
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context) => SymptomPage()),
+              );
+            },
           ),
+
+// EDUCATE ME PAGE LINK
+
           ListTile(
             leading: Image.asset(
               'assets/Images/book.png',
@@ -31,8 +63,16 @@ class NavBar extends StatelessWidget {
               width: 20,
             ),
             title: Text('Educate Me'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context) => EducateMePage()),
+              );
+            },
           ),
+
+// SOCIAL SUPPORT PAGE LINK
+
           ListTile(
             leading: Image.asset(
               'assets/Images/social-care.png',
@@ -40,18 +80,34 @@ class NavBar extends StatelessWidget {
               width: 20,
             ),
             title: Text('Social Support'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context) => SocialSupportpage()),
+              );
+            },
           ),
 
-          ListTile(
-            leading: Image.asset(
-              'assets/Images/magic.png',
-              height: 20,
-              width: 20,
-            ),
-            title: Text('Entertain Me'),
-            onTap: () => null,
-          ),
+// HEALTH AND SAFETY ME PAGE LINK
+
+          // ListTile(
+          //   leading: Image.asset(
+          //     'assets/Images/magic.png',
+          //     height: 20,
+          //     width: 20,
+          //   ),
+          //   title: Text('Health and Safety'),
+          //   onTap: () {
+          //     Navigator.push( 
+          //       context,
+          //       MaterialPageRoute(builder: (context) => HealthsafetyPage()),
+          //     );
+          //   },
+
+          // ),
+
+// EXERCISE PAGE LINK
+
           ListTile(
             leading: Image.asset(
               'assets/Images/meditation.png',
@@ -59,25 +115,57 @@ class NavBar extends StatelessWidget {
               width: 20,
             ),
             title: Text('Exercise'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context) => ExercisePage()),
+              );
+            },
+
           ),
+          
+// DIET PAGE LINK
+
           ListTile(
             leading: Icon(Icons.food_bank_outlined),
             title: Text('Diet'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context) => DietPage()),
+              );
+            },
           ),
 
-          ListTile(
-            leading: Icon(Icons.pregnant_woman_outlined),
-            title: Text('Prenatal'),
-            onTap: () => null,
-          ),
+// PRENATAL PAGE LINK
 
-          ListTile(
-            leading: Icon(Icons.woman),
-            title: Text('Postnatal'),
-            onTap: () => null,
-          ),
+          // ListTile(
+          //   leading: Icon(Icons.pregnant_woman_outlined),
+          //   title: Text('Prenatal'),
+          //   onTap: () {
+          //     Navigator.push( 
+          //       context,
+          //       MaterialPageRoute(builder: (context) => PrenatalPage()),
+          //     );
+          //   },
+
+          // ),
+
+// POSTNATAL PAGE LINK
+
+          // ListTile(
+          //   leading: Icon(Icons.woman),
+          //   title: Text('Postnatal'),
+          //   onTap: () {
+          //     Navigator.push( 
+          //       context,
+          //       MaterialPageRoute(builder: (context) => PostnatalPage()),
+          //     );
+          //   },
+
+          // ),
+
+// CALENDAR PAGE LINK
 
           ListTile(
             title: Text('My Calendar'),
@@ -86,7 +174,12 @@ class NavBar extends StatelessWidget {
               height: 20,
               width: 20,
             ),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context) => CalendarPage()),
+              );
+            },
           ),
 
         ],

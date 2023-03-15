@@ -7,6 +7,7 @@ import 'educate.dart';
 import 'symptom.dart';
 import 'diet.dart';
 import 'exercise.dart';
+import 'socialSupport.dart';
 
 void main() {
   runApp(const MyApp());
@@ -91,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: (){
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => NavBar()),
+                        MaterialPageRoute(builder: (context) => SocialSupportpage()),
                       );
                     },
                     child: Text(

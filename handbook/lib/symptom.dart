@@ -141,7 +141,7 @@ class SymptomPage extends StatelessWidget {
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'PREGNANCY TRACKER',
+                      'MY DOCTOR',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),
@@ -157,7 +157,7 @@ class SymptomPage extends StatelessWidget {
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'DIET',
+                      'MY DIET',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),

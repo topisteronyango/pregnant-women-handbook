@@ -156,13 +156,13 @@ class ExercisePage extends StatelessWidget {
                 Column(
                   children: [
                     Image.asset(
-                      'assets/Images/pregnancy.png',
+                      'assets/Images/diet.png',
                       width: 100,
                       height: 100,
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'PREGNANCY TRACKER',
+                      'MY DIET',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),
@@ -172,13 +172,13 @@ class ExercisePage extends StatelessWidget {
                 Column(
                   children: [
                     Image.asset(
-                      'assets/Images/calendar.png',
+                      'assets/Images/pregnancy.png',
                       width: 100,
                       height: 100,
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'MY CALENDAR',
+                      'PREGNANCY TRACKER',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),

@@ -117,18 +117,34 @@ class EducateMePage extends StatelessWidget {
 
                   children: [
                     Image.asset(
-                      'assets/Images/social-care.png',
+                      'assets/Images/coughing.png',
                       width: 100,
                       height: 100,
                       fit: BoxFit.cover,
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'PREGNANCY \n TRACKER',
+                      'SYMPTOMS \n TRACKER',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/Images/social-care.png',
+                      width: 100,
+                      height: 100,
+                    ),
+                    SizedBox(height: 16),
+                    Text(
+                      'SOCIAL SUPPORT',
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
                   ],
                 ),
@@ -142,22 +158,6 @@ class EducateMePage extends StatelessWidget {
                     SizedBox(height: 16),
                     Text(
                       'PREGNANCY TRACKER',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Image.asset(
-                      'assets/Images/book.png',
-                      width: 100,
-                      height: 100,
-                    ),
-                    SizedBox(height: 16),
-                    Text(
-                      'EDUCATE ME',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),
