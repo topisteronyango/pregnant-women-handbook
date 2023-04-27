@@ -4,13 +4,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'calendar.dart';
 import 'doctor.dart';
 import 'educate.dart';
-// import 'healthSafety.dart';
+import 'healthSafety.dart';
 import 'symptom.dart';
 import 'diet.dart';
 import 'exercise.dart';
 import 'socialSupport.dart';
-// import 'prenatal.dart';
-// import 'postnatal.dart';
+import 'prenatal.dart';
+import 'postnatal.dart';
 
 
 class NavBar extends StatelessWidget {
@@ -90,21 +90,21 @@ class NavBar extends StatelessWidget {
 
 // HEALTH AND SAFETY ME PAGE LINK
 
-          // ListTile(
-          //   leading: Image.asset(
-          //     'assets/Images/magic.png',
-          //     height: 20,
-          //     width: 20,
-          //   ),
-          //   title: Text('Health and Safety'),
-          //   onTap: () {
-          //     Navigator.push( 
-          //       context,
-          //       MaterialPageRoute(builder: (context) => HealthsafetyPage()),
-          //     );
-          //   },
+          ListTile(
+            leading: Image.asset(
+              'assets/Images/magic.png',
+              height: 20,
+              width: 20,
+            ),
+            title: Text('Health and Safety'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HealthsafetyPage()),
+              );
+            },
 
-          // ),
+          ),
 
 // EXERCISE PAGE LINK
 
@@ -139,31 +139,31 @@ class NavBar extends StatelessWidget {
 
 // PRENATAL PAGE LINK
 
-          // ListTile(
-          //   leading: Icon(Icons.pregnant_woman_outlined),
-          //   title: Text('Prenatal'),
-          //   onTap: () {
-          //     Navigator.push( 
-          //       context,
-          //       MaterialPageRoute(builder: (context) => PrenatalPage()),
-          //     );
-          //   },
+          ListTile(
+            leading: Icon(Icons.pregnant_woman_outlined),
+            title: Text('Prenatal'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PrenatalPage()),
+              );
+            },
 
-          // ),
+          ),
 
 // POSTNATAL PAGE LINK
 
-          // ListTile(
-          //   leading: Icon(Icons.woman),
-          //   title: Text('Postnatal'),
-          //   onTap: () {
-          //     Navigator.push( 
-          //       context,
-          //       MaterialPageRoute(builder: (context) => PostnatalPage()),
-          //     );
-          //   },
+          ListTile(
+            leading: Icon(Icons.woman),
+            title: Text('Postnatal'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PostnatalPage()),
+              );
+            },
 
-          // ),
+          ),
 
 // CALENDAR PAGE LINK
 
