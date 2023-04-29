@@ -164,7 +164,7 @@ class NavBar extends StatelessWidget {
             },
 
           ),
-
+ 
 // CALENDAR PAGE LINK
 
           ListTile(
@@ -190,3 +190,5 @@ class NavBar extends StatelessWidget {
 
   }
 }
+
+

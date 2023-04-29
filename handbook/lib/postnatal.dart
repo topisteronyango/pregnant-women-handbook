@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
+import 'prenatal.dart';
+import 'symptom.dart';
+import 'calendar.dart';
 
 
 class PostnatalPage extends StatelessWidget {
@@ -19,11 +22,6 @@ class PostnatalPage extends StatelessWidget {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
-
-
-
-
-
 
           OutlinedButton(
             onPressed: (){
@@ -51,40 +49,39 @@ class PostnatalPage extends StatelessWidget {
 
           ),
 
-
-
-
           SizedBox(height: 100,),
-
 
           Container(
             color: Colors.deepPurple,
             height: 195,
-
-
             padding: EdgeInsets.all(16),
-
-
-
-
-
 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+
+// PRENATAL PAGE IMAGE LINK 
+
                 Column(
-
-
                   children: [
-                    Image.asset(
-                      'assets/Images/social-care.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => PrenatalPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/prenatal.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      'PREGNANCY \n TRACKER',
+                    const SizedBox(height: 16),
+                    const Text(
+                      'PRENATAL CARE TIPS',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -92,38 +89,69 @@ class PostnatalPage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+// SYMPTOMS PAGE IMAGE LINK 
+
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SymptomPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/pregnancy.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
+                    const SizedBox(height: 16),
+                    const Text(
                       'PREGNANCY TRACKER',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ],
                 ),
+
+
+// CALENDAR PAGE IMAGE LINK 
+
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/calendar.png',
-                      width: 100,
-                      height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CalendarPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/calendar.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      'MY CALENDAR',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
+                    const SizedBox(height: 16),
+                    const Text(
+                      'PREGNANCY TRACKER',
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ],
                 ),
+
+
               ],
             )
             ,

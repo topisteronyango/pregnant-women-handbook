@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:handbook/healthSafety.dart';
 import 'navBar.dart';
+import 'socialSupport.dart';
+import 'diet.dart';
+import 'symptom.dart';
 
 class ExercisePage extends StatelessWidget {
   @override
@@ -134,18 +138,28 @@ class ExercisePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Column(
 
+// HEALTH & SAFETY PAGE IMAGE LINK 
+                Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/meditation.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HealthsafetyPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/health.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      'MY EXERCISES',
+                    const SizedBox(height: 16),
+                    const Text(
+                      'SOCIAL  \n SUPPORT',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -153,38 +167,67 @@ class ExercisePage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+// DIET IMAGE LINK 
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/diet.png',
-                      width: 100,
-                      height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => DietPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/diet.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
+                    const SizedBox(height: 16),
+                    const Text(
                       'MY DIET',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ],
                 ),
+
+// SYMPTOMS PAGE IMAGE LINK 
+
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SymptomPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/pregnancy.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      'PREGNANCY TRACKER',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
+                    const SizedBox(height: 16),
+                    const Text(
+                      'SYMPTOMS TRACKER',
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ],
                 ),
+
+
               ],
             )
             ,

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
+import 'socialSupport.dart';
+import 'doctor.dart';
+import 'symptom.dart';
 
 
 class HealthsafetyPage extends StatelessWidget {
@@ -46,13 +49,6 @@ class HealthsafetyPage extends StatelessWidget {
 
 
           SizedBox(height: 35,),
-
-
-
-
-
-
-
 
           OutlinedButton(
             onPressed: (){
@@ -104,25 +100,32 @@ class HealthsafetyPage extends StatelessWidget {
           Container(
             color: Colors.deepPurple,
             height: 234.2,
-
-
             padding: EdgeInsets.all(16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+
+// SOCIAL SUPPORT IMAGE LINK 
                 Column(
-
-
                   children: [
-                    Image.asset(
-                      'assets/Images/social-care.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SocialSupportpage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/social-care.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      'SOCIAL \n SUPPORT',
+                    const SizedBox(height: 16),
+                    const Text(
+                      'SOCIAL  \n SUPPORT',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -130,38 +133,69 @@ class HealthsafetyPage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+// DOCTOR PAGE IMAGE LINK 
+
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/advice.png',
-                      width: 100,
-                      height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyAppointmentsPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/advice.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
+                    const SizedBox(height: 16),
+                    const Text(
                       'MY DOCTOR',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ],
                 ),
+
+              
+// SYMPTOMS PAGE IMAGE LINK 
+
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SymptomPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/pregnancy.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
+                    const SizedBox(height: 16),
+                    const Text(
                       'PREGNANCY TRACKER',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ],
                 ),
+
+
               ],
             )
             ,

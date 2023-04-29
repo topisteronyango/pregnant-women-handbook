@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
+import 'socialSupport.dart';
+import 'doctor.dart';
+import 'diet.dart';
 
 class SymptomPage extends StatelessWidget {
   @override
@@ -100,31 +103,38 @@ class SymptomPage extends StatelessWidget {
           ),
 
 
-          SizedBox(height: 80,),
+          SizedBox(height: 55,),
 
           Container(
             color: Colors.deepPurple,
             height: 195,
-
             padding: EdgeInsets.all(16),
-
-
 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+                
+// SOCIAL SUPPORT IMAGE LINK 
                 Column(
-
                   children: [
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SocialSupportpage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/social-care.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      'PREGNANCY \n TRACKER',
+                    const SizedBox(height: 16),
+                    const Text(
+                      'SOCIAL  \n SUPPORT',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -132,43 +142,69 @@ class SymptomPage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+// DOCTOR PAGE IMAGE LINK 
+
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/advice.png',
-                      width: 100,
-                      height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyAppointmentsPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/advice.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
+                    const SizedBox(height: 16),
+                    const Text(
                       'MY DOCTOR',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ],
                 ),
+
+// DIET PAGE  IMAGE LINK 
                 Column(
-                  children: [
-                    Image.asset(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to the second page when the image is tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DietPage()),
+                      );
+                    },
+                    child: Image.asset(
                       'assets/Images/diet.png',
                       width: 100,
                       height: 100,
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      'MY DIET',
-                      style: TextStyle(fontSize: 8,
+                    
+                  ),
+                  const SizedBox(height: 16),
+                  const Text(
+                    'MY DIET',
+                    style: TextStyle(
+                        fontSize: 8,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,),
-                    ),
-                  ],
-                ),
-              ],
-            )
-            ,
-          ),
-        ],
+                        color: Colors.white),
+                  ),
+                ],
+              ),
+          
+        ]
+         ),
+      )],
 
 
       ),
