@@ -3,9 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/handbook/build" />
-      <excludeFolder url="file://$MODULE_DIR$/handbook/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/handbook/.pub" />
+      <sourceFolder url="file://$MODULE_DIR$/handbook/android/app/src/main/kotlin" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

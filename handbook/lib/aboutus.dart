@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class AboutUsPage extends StatelessWidget {
   @override
@@ -53,29 +54,46 @@ class AboutUsPage extends StatelessWidget {
               'Services we offer:',
               style: Theme.of(context).textTheme.headline6,
             ),
+            SizedBox(height: 15,),
+            Text(
+              '> Prenatal Educational Tips',
+              style: Theme.of(context).textTheme.bodyText2,
+            ),
+            Text(
+              '> Postnatal Educational Tips',
+              style: Theme.of(context).textTheme.bodyText2,
+            ),
+            Text(
+              '> Social Support',
+              style: Theme.of(context).textTheme.bodyText2,
+            ),
+            Text(
+              '> Food Consumption Health Tips',
+              style: Theme.of(context).textTheme.bodyText2,
+            ),
+
             SizedBox(height: 8),
-            ListTile(
-              leading: Icon(Icons.check),
-              title: Text('Prenatal Education Tips'),
-            ),
-            ListTile(
-              leading: Icon(Icons.check),
-              title: Text('Postnatal Education Tips'),
-            ),
-            ListTile(
-              leading: Icon(Icons.check),
-              title: Text('Social Support'),
-            ),
-            ListTile(
-              leading: Icon(Icons.check),
-              title: Text('Food Consumption Health Tips'),
-            ),
+            // ListTile(
+            //   leading: Icon(Icons.check),
+            //   title: Text('Prenatal Education Tips'),
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.check),
+            //   title: Text('Postnatal Education Tips'),
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.check),
+            //   title: Text('Social Support'),
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.check),
+            //   title: Text('Food Consumption Health Tips'),
+            // ),
 
             Text(
               'Follow Us:',
               style: Theme.of(context).textTheme.headline6,
             ),
-            SizedBox(height: 8),
             ListTile(
               leading: Icon(Icons.link),
               title: Text('Facebook'),

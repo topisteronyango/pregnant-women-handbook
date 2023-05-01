@@ -1,31 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:handbook/eveningExercise.dart';
-import 'morningExercise.dart';
-import 'afternoonExe.dart';
-import 'eveningExercise.dart';
+import 'navBar.dart';
 
-class ExercisePage extends StatelessWidget {
+
+class PostnatalPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Let's Work Out"),
+        title: Text("Post-Natal care tips"),
       ),
       body: Column(
         children: [
-          SizedBox(height: 35,),
+          SizedBox(height: 20,),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              "       READY TO LEARN?? ",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+
+
+
+
 
 
           OutlinedButton(
             onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MorningExercise()),
+                MaterialPageRoute(builder: (context) => NavBar()),
               );
             },
             child: Text(
-              'MORNING',
+              'FOR MORE INFORMATION',
               style: TextStyle(fontSize: 16.0, color: Colors.white),
+
 
             ),
             style: ButtonStyle(
@@ -38,74 +48,24 @@ class ExercisePage extends StatelessWidget {
                 )
             ),
 
-          ),
-
-          SizedBox(height: 35,),
-
-
-
-
-          OutlinedButton(
-            onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => AfternoonExercise()),
-              );
-            },
-            child: Text(
-              'AFTERNOON',
-              style: TextStyle(fontSize: 16.0, color: Colors.white),
-
-            ),
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Colors.red),
-                    )
-                )
-            ),
-
-          ),
-          SizedBox(height: 35,),
-
-          OutlinedButton(
-            onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => EveningExercise()),
-              );
-            },
-            child: Text(
-              'EVENING',
-              style: TextStyle(fontSize: 16.0, color: Colors.white),
-
-            ),
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Colors.red),
-                    )
-                )
-            ),
 
           ),
 
 
 
 
+          SizedBox(height: 100,),
 
-
-          SizedBox(height: 158,),
 
           Container(
             color: Colors.deepPurple,
             height: 195,
 
+
             padding: EdgeInsets.all(16),
+
+
+
 
 
 
@@ -114,16 +74,17 @@ class ExercisePage extends StatelessWidget {
               children: [
                 Column(
 
+
                   children: [
                     Image.asset(
-                      'assets/Images/meditation.png',
+                      'assets/Images/social-care.png',
                       width: 100,
                       height: 100,
                       fit: BoxFit.cover,
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'MY EXERCISES',
+                      'PREGNANCY \n TRACKER',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -168,6 +129,8 @@ class ExercisePage extends StatelessWidget {
             ,
           ),
         ],
+
+
 
 
       ),
