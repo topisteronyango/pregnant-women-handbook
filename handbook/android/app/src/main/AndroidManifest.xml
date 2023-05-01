@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.handbook">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="handbook"
         android:name="${applicationName}"
@@ -20,6 +23,9 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+            <meta-data 
+            android:name="com.google.android.geo.API_KEY"  
+            android:value="AIzaSyB8Y7aDQerUgrZrHhqHJUgq0omGY_0Vbt0"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -30,5 +36,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        
+        
     </application>
 </manifest>

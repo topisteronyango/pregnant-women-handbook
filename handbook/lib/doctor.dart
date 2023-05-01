@@ -3,6 +3,7 @@ import 'navBar.dart';
 import 'socialSupport.dart';
 import 'symptom.dart';
 import 'educate.dart';
+import 'maps.dart';
 
 
 class MyAppointmentsPage extends StatelessWidget {
@@ -120,7 +121,7 @@ class MyAppointmentsPage extends StatelessWidget {
                         // Navigate to the second page when the image is tapped
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SocialSupportpage()),
+                          MaterialPageRoute(builder: (context) => NearestHospital()),
                         );
                       },
                       child: Image.asset(
