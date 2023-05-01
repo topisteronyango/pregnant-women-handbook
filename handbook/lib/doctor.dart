@@ -3,6 +3,7 @@ import 'navBar.dart';
 import 'socialSupport.dart';
 import 'symptom.dart';
 import 'educate.dart';
+import 'maps.dart';
 
 
 class MyAppointmentsPage extends StatelessWidget {
@@ -103,7 +104,13 @@ class MyAppointmentsPage extends StatelessWidget {
 
           SizedBox(height: 55,),
 
-          Container(
+          
+
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: 
+               Container(
             color: Colors.deepPurple,
             height: 180,
             padding: EdgeInsets.all(16),
@@ -120,7 +127,7 @@ class MyAppointmentsPage extends StatelessWidget {
                         // Navigate to the second page when the image is tapped
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SocialSupportpage()),
+                          MaterialPageRoute(builder: (context) => NearestHospital()),
                         );
                       },
                       child: Image.asset(
@@ -199,30 +206,26 @@ class MyAppointmentsPage extends StatelessWidget {
                   ),
                 ],
               ),
-
-
               ],
             )
             ,
           ),
+              
+              // child: Padding(
+              //   padding: const EdgeInsets.all(30.0),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       Text(
+              //         "Click here for more helpful pregnancy information...",
+              //         style: TextStyle(fontSize: 14),
+              //       ),
+              //       Icon(Icons.chevron_right),
+              //       // NavBar()
+              //     ],
+              //   ),
+              // ),
 
-          Expanded(
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Click here for more helpful pregnanc information...",
-                      style: TextStyle(fontSize: 14),
-                    ),
-                    Icon(Icons.chevron_right),
-                    // NavBar()
-                  ],
-                ),
-              ),
             ),
           ),
         ],

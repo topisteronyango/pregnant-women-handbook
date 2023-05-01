@@ -6,6 +6,8 @@ import 'symptom.dart';
 import 'calendar.dart';
 
 
+
+
 class PrenatalPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -56,7 +58,13 @@ class PrenatalPage extends StatelessWidget {
           SizedBox(height: 100,),
 
 
-          Container(
+
+
+        
+        Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
             color: Colors.deepPurple,
             height: 195,
             padding: EdgeInsets.all(16),
@@ -153,21 +161,16 @@ class PrenatalPage extends StatelessWidget {
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
-                    ),
-                  ],
-                ),
-
-
-              ],
-            )
-            ,
-          ),
-        ],
-
-
-
-
-      ),
-    );
-  }
+                  ),
+                ],
+              ),
+            ],
+          ), 
+        ),
+      )
+    )
+    ],
+  ),
+);
+}
 }
