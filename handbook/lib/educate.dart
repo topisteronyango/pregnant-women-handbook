@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
-<<<<<<< HEAD
 import 'manage_emotional_imbalances.dart';
 import 'healthyFood.dart';
 import 'package:handbook/generalSelfCare.dart';
 
-=======
 import 'symptom.dart';
 import 'socialSupport.dart';
 import 'exercise.dart';
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
 class EducateMePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -122,17 +119,6 @@ class EducateMePage extends StatelessWidget {
 
                 Column(
                   children: [
-<<<<<<< HEAD
-                    Image.asset(
-                      'assets/Images/social-care.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(height: 16),
-                    Text(
-                      'PREGNANCY \n TRACKER',
-=======
                     GestureDetector(
                       onTap: () {
                         // Navigate to the second page when the image is tapped
@@ -151,7 +137,6 @@ class EducateMePage extends StatelessWidget {
                     const SizedBox(height: 16),
                     const Text(
                       'SYMPTOMS TRACKER',
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -163,12 +148,6 @@ class EducateMePage extends StatelessWidget {
 // SOCIAL SUPPORT IMAGE LINK 
                 Column(
                   children: [
-<<<<<<< HEAD
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
-=======
                     GestureDetector(
                       onTap: () {
                         // Navigate to the second page when the image is tapped
@@ -212,7 +191,6 @@ class EducateMePage extends StatelessWidget {
                         height: 100,
                       ),
                       
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
                     ),
                     const SizedBox(height: 16),
                     const Text(
@@ -224,27 +202,8 @@ class EducateMePage extends StatelessWidget {
                     ),
                   ],
                 ),
-<<<<<<< HEAD
-                Column(
-                  children: [
-                    Image.asset(
-                      'assets/Images/book.png',
-                      width: 100,
-                      height: 100,
-                    ),
-                    SizedBox(height: 16),
-                    Text(
-                      'EDUCATE ME',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
-                    ),
-                  ],
-                ),
-=======
 
 
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
               ],
             )
             ,

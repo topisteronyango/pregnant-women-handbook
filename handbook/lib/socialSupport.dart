@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import 'package:flutter/material.dart';
 import 'navBar.dart';
 import 'prenatal.dart';
@@ -219,4 +217,3 @@ class SocialSupportpage extends StatelessWidget {
     );
   }
 }
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630

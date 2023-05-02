@@ -83,76 +83,6 @@ class _CalendarPageState extends State<CalendarPage> {
               ),
 
 
-<<<<<<< HEAD
-              SizedBox(height: 68,),
-
-              Container(
-                color: Colors.deepPurple,
-                height: 150,
-                padding: EdgeInsets.all(16),
-
-
-
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-
-                  children: [
-                    Column(
-
-                      children: [
-                        Image.asset(
-                          'assets/Images/pregnancy.png',
-                          width: 50,
-                          height: 50,
-                          fit: BoxFit.cover,
-                        ),
-                        SizedBox(height: 16.0,),
-                        Text(
-                          'PREGNANCY \n TRACKER',
-                          style: TextStyle(
-                              fontSize: 8,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Image.asset(
-                          'assets/Images/book.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        SizedBox(height: 16.0,),
-                        Text(
-                          'EDUCATE ME',
-                          style: TextStyle(fontSize: 8,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Image.asset(
-                          'assets/Images/advice.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        SizedBox(height: 16.0,),
-                        Text(
-                          'MY DOCTOR',
-                          style: TextStyle(fontSize: 8,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-                ,
-              ),
-=======
             Container(
               color: Colors.deepPurple,
               height: 195,
@@ -258,7 +188,6 @@ class _CalendarPageState extends State<CalendarPage> {
               )
               ,
             ),
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
 
             ],
           ),

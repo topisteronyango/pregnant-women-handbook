@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
-<<<<<<< HEAD
-import 'comsymptoms.dart';
-import 'warnsymptoms.dart';
-import 'addSymp.dart';
-=======
 import 'socialSupport.dart';
 import 'doctor.dart';
 import 'diet.dart';
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
+import 'comsymptoms.dart';
+import 'addSymp.dart';
+import 'warnsymptoms.dart';
 
 class SymptomPage extends StatelessWidget {
   @override
@@ -113,75 +110,6 @@ class SymptomPage extends StatelessWidget {
 
             SizedBox(height: 80,),
 
-<<<<<<< HEAD
-            Container(
-              color: Colors.deepPurple,
-              height: 195,
-
-              padding: EdgeInsets.all(16),
-
-
-
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
-
-                    children: [
-                      Image.asset(
-                        'assets/Images/pregnancy.png',
-                        width: 100,
-                        height: 100,
-                        fit: BoxFit.cover,
-                      ),
-                      SizedBox(height: 16),
-                      Text(
-                        'PREGNANCY \n TRACKER',
-                        style: TextStyle(
-                            fontSize: 8,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'assets/Images/advice.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      SizedBox(height: 16),
-                      Text(
-                        'PREGNANCY TRACKER',
-                        style: TextStyle(fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'assets/Images/diet.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      SizedBox(height: 16),
-                      Text(
-                        'DIET',
-                        style: TextStyle(fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,),
-                      ),
-                    ],
-                  ),
-                ],
-              )
-              ,
-            ),
-          ],
-=======
           SizedBox(height: 55,),
 
           Container(
@@ -284,7 +212,6 @@ class SymptomPage extends StatelessWidget {
         ]
          ),
       )],
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
 
 
         ),

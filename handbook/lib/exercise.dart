@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:handbook/eveningExercise.dart';
-import 'morningExercise.dart';
-import 'afternoonExe.dart';
-import 'eveningExercise.dart';
-=======
 import 'package:handbook/healthSafety.dart';
 import 'navBar.dart';
 import 'socialSupport.dart';
 import 'diet.dart';
 import 'symptom.dart';
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
+import 'morningExercise.dart';
+import 'afternoonExe.dart';
+import 'eveningExercise.dart';
+
 
 class ExercisePage extends StatelessWidget {
   @override
@@ -153,19 +150,6 @@ class ExercisePage extends StatelessWidget {
 // DIET IMAGE LINK 
                 Column(
                   children: [
-<<<<<<< HEAD
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
-                    ),
-                    SizedBox(height: 16),
-                    Text(
-                      'PREGNANCY TRACKER',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
-=======
                     GestureDetector(
                       onTap: () {
                         // Navigate to the second page when the image is tapped
@@ -188,7 +172,6 @@ class ExercisePage extends StatelessWidget {
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
                     ),
                   ],
                 ),
@@ -197,19 +180,6 @@ class ExercisePage extends StatelessWidget {
 
                 Column(
                   children: [
-<<<<<<< HEAD
-                    Image.asset(
-                      'assets/Images/calendar.png',
-                      width: 100,
-                      height: 100,
-                    ),
-                    SizedBox(height: 16),
-                    Text(
-                      'MY CALENDAR',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
-=======
                     GestureDetector(
                       onTap: () {
                         // Navigate to the second page when the image is tapped
@@ -232,7 +202,6 @@ class ExercisePage extends StatelessWidget {
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
                     ),
                   ],
                 ),

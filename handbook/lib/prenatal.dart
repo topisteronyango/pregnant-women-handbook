@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import 'package:flutter/material.dart';
 import 'package:handbook/postnatal.dart';
 import 'navBar.dart';
@@ -173,4 +171,3 @@ class PrenatalPage extends StatelessWidget {
     );
   }
 }
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import 'package:flutter/material.dart';
 import 'navBar.dart';
 import 'socialSupport.dart';
@@ -211,4 +209,3 @@ class HealthsafetyPage extends StatelessWidget {
     );
   }
 }
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630

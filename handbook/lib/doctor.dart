@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
-<<<<<<< HEAD
-import 'bookAppointment.dart';
-=======
 import 'socialSupport.dart';
 import 'symptom.dart';
 import 'educate.dart';
 
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
 
 class MyAppointmentsPage extends StatelessWidget {
   @override
@@ -134,15 +130,9 @@ class MyAppointmentsPage extends StatelessWidget {
                       ),
                       
                     ),
-<<<<<<< HEAD
-                    SizedBox(height: 16),
-                    Text(
-                      'PREGNANCY \n TRACKER',
-=======
                     const SizedBox(height: 16),
                     const Text(
                       'SOCIAL  \n SUPPORT',
->>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
