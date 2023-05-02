@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'navBar.dart';
+import 'symptom.dart';
+import 'educate.dart';
+import 'doctor.dart';
+
 
 void main() => runApp(CalendarPage());
 
@@ -79,6 +83,7 @@ class _CalendarPageState extends State<CalendarPage> {
               ),
 
 
+<<<<<<< HEAD
               SizedBox(height: 68,),
 
               Container(
@@ -147,6 +152,113 @@ class _CalendarPageState extends State<CalendarPage> {
                 )
                 ,
               ),
+=======
+            Container(
+              color: Colors.deepPurple,
+              height: 195,
+              padding: EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+
+// SYMPTOMS PAGE IMAGE LINK 
+
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SymptomPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/pregnancy.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
+                    ),
+                    const SizedBox(height: 16),
+                    const Text(
+                      'SYMPTOMS TRACKER',
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+
+
+// EDUCATE ME PAGE IMAGE LINK 
+
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => EducateMePage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/book.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
+                    ),
+                    const SizedBox(height: 16),
+                    const Text(
+                      'EDUCATE ME',
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+
+
+// DOCTOR PAGE IMAGE LINK 
+
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyAppointmentsPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/advice.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
+                    ),
+                    const SizedBox(height: 16),
+                    const Text(
+                      'MY DOCTOR',
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+
+
+                ],
+              )
+              ,
+            ),
+>>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
 
             ],
           ),

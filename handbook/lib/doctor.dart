@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
+<<<<<<< HEAD
 import 'bookAppointment.dart';
+=======
+import 'socialSupport.dart';
+import 'symptom.dart';
+import 'educate.dart';
+
+>>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
 
 class MyAppointmentsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Book Appointment"),
+        title: Text("My doctors"),
       ),
       body: Column(
         children: [
@@ -105,23 +112,37 @@ class MyAppointmentsPage extends StatelessWidget {
             height: 180,
             padding: EdgeInsets.all(16),
 
-
-
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Column(
 
+// SOCIAL SUPPORT IMAGE LINK 
+                Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/social-care.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SocialSupportpage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/social-care.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
+<<<<<<< HEAD
                     SizedBox(height: 16),
                     Text(
                       'PREGNANCY \n TRACKER',
+=======
+                    const SizedBox(height: 16),
+                    const Text(
+                      'SOCIAL  \n SUPPORT',
+>>>>>>> 49c107a8a7940378ebbf97b83a8f55100866d630
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -129,38 +150,67 @@ class MyAppointmentsPage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+// SYMPTOMS PAGE IMAGE LINK 
+
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the second page when the image is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SymptomPage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/Images/pregnancy.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      
                     ),
-                    SizedBox(height: 16),
-                    Text(
+                    const SizedBox(height: 16),
+                    const Text(
                       'PREGNANCY TRACKER',
-                      style: TextStyle(fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,),
+                      style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ],
                 ),
+
+// EDUCATE_ME PAGE  IMAGE LINK 
                 Column(
-                  children: [
-                    Image.asset(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to the second page when the image is tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => EducateMePage()),
+                      );
+                    },
+                    child: Image.asset(
                       'assets/Images/book.png',
                       width: 100,
                       height: 100,
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      'EDUCATE ME',
-                      style: TextStyle(fontSize: 8,
+                    
+                  ),
+                  const SizedBox(height: 16),
+                  const Text(
+                    'EDUCATE ME',
+                    style: TextStyle(
+                        fontSize: 8,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,),
-                    ),
-                  ],
-                ),
+                        color: Colors.white),
+                  ),
+                ],
+              ),
+
+
               ],
             )
             ,
