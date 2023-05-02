@@ -3,6 +3,7 @@ import 'navBar.dart';
 import 'socialSupport.dart';
 import 'symptom.dart';
 import 'educate.dart';
+import 'maps.dart';
 
 
 class MyAppointmentsPage extends StatelessWidget {
@@ -10,7 +11,7 @@ class MyAppointmentsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My doctors"),
+        title: Text("Book Appointment"),
       ),
       body: Column(
         children: [
@@ -108,19 +109,20 @@ class MyAppointmentsPage extends StatelessWidget {
             height: 180,
             padding: EdgeInsets.all(16),
 
+
+
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-
-// SOCIAL SUPPORT IMAGE LINK 
                 Column(
+
                   children: [
                     GestureDetector(
                       onTap: () {
                         // Navigate to the second page when the image is tapped
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SocialSupportpage()),
+                          MaterialPageRoute(builder: (context) => NearestHospital()),
                         );
                       },
                       child: Image.asset(
@@ -130,9 +132,9 @@ class MyAppointmentsPage extends StatelessWidget {
                       ),
                       
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'SOCIAL  \n SUPPORT',
+                    SizedBox(height: 16),
+                    Text(
+                      'PREGNANCY \n TRACKER',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -140,67 +142,38 @@ class MyAppointmentsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-
-// SYMPTOMS PAGE IMAGE LINK 
-
                 Column(
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SymptomPage()),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Images/pregnancy.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      
+                    Image.asset(
+                      'assets/Images/pregnancy.png',
+                      width: 100,
+                      height: 100,
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
+                    SizedBox(height: 16),
+                    Text(
                       'PREGNANCY TRACKER',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
                   ],
                 ),
-
-// EDUCATE_ME PAGE  IMAGE LINK 
                 Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      // Navigate to the second page when the image is tapped
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => EducateMePage()),
-                      );
-                    },
-                    child: Image.asset(
+                  children: [
+                    Image.asset(
                       'assets/Images/book.png',
                       width: 100,
                       height: 100,
                     ),
-                    
-                  ),
-                  const SizedBox(height: 16),
-                  const Text(
-                    'EDUCATE ME',
-                    style: TextStyle(
-                        fontSize: 8,
+                    SizedBox(height: 16),
+                    Text(
+                      'EDUCATE ME',
+                      style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                ],
-              ),
-
-
+                        color: Colors.white,),
+                    ),
+                  ],
+                ),
               ],
             )
             ,

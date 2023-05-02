@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:handbook/calendar.dart';
-import 'package:handbook/exercise.dart';
-import 'package:handbook/symptom.dart';
 import 'navBar.dart';
 import 'starch.dart';
 import 'proteins.dart';
 import 'diary.dart';
 import 'snacks.dart';
 import 'fruitsVeges.dart';
-
 
 class DietPage extends StatelessWidget {
   @override
@@ -158,32 +154,25 @@ class DietPage extends StatelessWidget {
           Container(
             color: Colors.deepPurple,
             height: 195,
+
             padding: EdgeInsets.all(16),
+
+
 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-
-// EXERCISE PAGE IMAGE LINK 
                 Column(
+
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ExercisePage()),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Images/meditation.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      
+                    Image.asset(
+                      'assets/Images/meditation.png',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
+                    SizedBox(height: 16),
+                    Text(
                       'MY EXERCISES',
                       style: TextStyle(
                           fontSize: 8,
@@ -192,66 +181,38 @@ class DietPage extends StatelessWidget {
                     ),
                   ],
                 ),
-
-// SYMPTOMS PAGE IMAGE LINK 
                 Column(
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SymptomPage()),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Images/pregnancy.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      
+                    Image.asset(
+                      'assets/Images/pregnancy.png',
+                      width: 100,
+                      height: 100,
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
+                    SizedBox(height: 16),
+                    Text(
                       'PREGNANCY TRACKER',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
                   ],
                 ),
-
-// CALENDAR PAGE IMAGE LINK 
-
                 Column(
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CalendarPage()),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Images/calendar.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      
+                    Image.asset(
+                      'assets/Images/calendar.png',
+                      width: 100,
+                      height: 100,
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
+                    SizedBox(height: 16),
+                    Text(
                       'MY CALENDAR',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
                   ],
                 ),
-                
               ],
             )
             ,

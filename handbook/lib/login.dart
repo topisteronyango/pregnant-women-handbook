@@ -3,14 +3,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:handbook/testfile.dart';
 import 'package:handbook/themes/themes_helper.dart';
 import 'package:handbook/homePage.dart';
 
 import 'forgot_password_page.dart';
 import 'registration_page.dart';
 import 'package:email_validator/email_validator.dart';
-
-
+import 'package:firebase_auth/firebase_auth.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -23,8 +23,8 @@ class LoginPage extends StatefulWidget{
 }
 
 class _LoginPageState extends State<LoginPage>{
-  double _headerHeight = 250;
-  Key _formKey = GlobalKey<FormState>();
+  // double _headerHeight = 250;
+  final Key _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   int _success = 1;
@@ -102,6 +102,9 @@ class _LoginPageState extends State<LoginPage>{
                                       //textInputDecoration('Email', 'Enter your email'),
 
                                   ),
+
+
+                                  //******** Some modification
                                   // controller: _emailController,
                                   // onSubmitted: (String value) {
                                   //   debugPrint(value);
@@ -210,7 +213,7 @@ class _LoginPageState extends State<LoginPage>{
                                 alignment: Alignment.topRight,
                                 child: GestureDetector(
                                   onTap: () {
-                                    // Navigator.push( context, MaterialPageRoute( builder: (context) => ForgotPasswordPage()), );
+                                    Navigator.push( context, MaterialPageRoute( builder: (context) => ForgotPasswordPage()), );
                                   },
                                   child: Text( "Forgot password?", style: TextStyle( color: Colors.black, ),
                                   ),

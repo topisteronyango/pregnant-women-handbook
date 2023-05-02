@@ -3,6 +3,7 @@
 // import 'package:flutter/cupertino.dart';
 // import 'package:flutter/material.dart';
 //
+// import 'package:handbook/testfile.dart';
 // final FirebaseAuth _auth = FirebaseAuth.instance;
 //
 // class SignupPage extends StatefulWidget {
@@ -18,14 +19,14 @@
 //   late String _userEmail;
 //
 //   void _register() async {
-//     final User user = (
+//     final User? user = (
 //         await _auth.createUserWithEmailAndPassword(email: _emailController.text, password: _passwordController.text)
 //     ).user;
 //
 //     if(user != null) {
 //       setState(() {
 //         _sucess = true;
-//         _userEmail = user.email;
+//         _userEmail = user.email!;
 //       });
 //     } else {
 //       setState(() {

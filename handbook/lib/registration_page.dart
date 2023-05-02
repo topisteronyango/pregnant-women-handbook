@@ -9,6 +9,8 @@ import 'package:email_validator/email_validator.dart';
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class RegistrationPage extends  StatefulWidget{
+  const RegistrationPage({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _RegistrationPageState();

@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
-import 'socialSupport.dart';
-import 'doctor.dart';
-import 'diet.dart';
 import 'comsymptoms.dart';
-import 'addSymp.dart';
 import 'warnsymptoms.dart';
+import 'addSymp.dart';
 
 class SymptomPage extends StatelessWidget {
   @override
@@ -110,108 +107,73 @@ class SymptomPage extends StatelessWidget {
 
             SizedBox(height: 80,),
 
-          SizedBox(height: 55,),
+            Container(
+              color: Colors.deepPurple,
+              height: 195,
 
-          Container(
-            color: Colors.deepPurple,
-            height: 195,
-            padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(16),
 
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                
-// SOCIAL SUPPORT IMAGE LINK 
-                Column(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SocialSupportpage()),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Images/social-care.png',
+
+
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+
+                    children: [
+                      Image.asset(
+                        'assets/Images/pregnancy.png',
                         width: 100,
                         height: 100,
+                        fit: BoxFit.cover,
                       ),
-                      
-                    ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'SOCIAL  \n SUPPORT',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                  ],
-                ),
-
-// DOCTOR PAGE IMAGE LINK 
-
-                Column(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => MyAppointmentsPage()),
-                        );
-                      },
-                      child: Image.asset(
+                      SizedBox(height: 16),
+                      Text(
+                        'PREGNANCY \n TRACKER',
+                        style: TextStyle(
+                            fontSize: 8,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Image.asset(
                         'assets/Images/advice.png',
                         width: 100,
                         height: 100,
                       ),
-                      
-                    ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'MY DOCTOR',
-                      style: TextStyle(
-                          fontSize: 8,
+                      SizedBox(height: 16),
+                      Text(
+                        'PREGNANCY TRACKER',
+                        style: TextStyle(fontSize: 8,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                  ],
-                ),
-
-// DIET PAGE  IMAGE LINK 
-                Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      // Navigate to the second page when the image is tapped
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DietPage()),
-                      );
-                    },
-                    child: Image.asset(
-                      'assets/Images/diet.png',
-                      width: 100,
-                      height: 100,
-                    ),
-                    
+                          color: Colors.white,),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 16),
-                  const Text(
-                    'MY DIET',
-                    style: TextStyle(
-                        fontSize: 8,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                  Column(
+                    children: [
+                      Image.asset(
+                        'assets/Images/diet.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      SizedBox(height: 16),
+                      Text(
+                        'DIET',
+                        style: TextStyle(fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,),
+                      ),
+                    ],
                   ),
                 ],
-              ),
-          
-        ]
-         ),
-      )],
+              )
+              ,
+            ),
+          ],
 
 
         ),

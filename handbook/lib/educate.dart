@@ -4,9 +4,6 @@ import 'manage_emotional_imbalances.dart';
 import 'healthyFood.dart';
 import 'package:handbook/generalSelfCare.dart';
 
-import 'symptom.dart';
-import 'socialSupport.dart';
-import 'exercise.dart';
 class EducateMePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -52,6 +49,9 @@ class EducateMePage extends StatelessWidget {
           ),
 
           SizedBox(height: 35,),
+
+
+
 
           OutlinedButton(
             onPressed: (){
@@ -108,35 +108,26 @@ class EducateMePage extends StatelessWidget {
           Container(
             color: Colors.deepPurple,
             height: 195,
+
             padding: EdgeInsets.all(16),
+
+
 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-
-
-// SYMPTOMS PAGE IMAGE LINK 
-
                 Column(
+
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SymptomPage()),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Images/coughing.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      
+                    Image.asset(
+                      'assets/Images/social-care.png',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'SYMPTOMS TRACKER',
+                    SizedBox(height: 16),
+                    Text(
+                      'PREGNANCY \n TRACKER',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -144,66 +135,38 @@ class EducateMePage extends StatelessWidget {
                     ),
                   ],
                 ),
-
-// SOCIAL SUPPORT IMAGE LINK 
                 Column(
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SocialSupportpage()),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Images/social-care.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      
+                    Image.asset(
+                      'assets/Images/pregnancy.png',
+                      width: 100,
+                      height: 100,
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'SOCIAL  \n SUPPORT',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                    SizedBox(height: 16),
+                    Text(
+                      'PREGNANCY TRACKER',
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
                   ],
                 ),
-
-// EXERCISE PAGE IMAGE LINK 
                 Column(
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        // Navigate to the second page when the image is tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ExercisePage()),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Images/meditation.png',
-                        width: 100,
-                        height: 100,
-                      ),
-                      
+                    Image.asset(
+                      'assets/Images/book.png',
+                      width: 100,
+                      height: 100,
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'MY EXERCISES',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                    SizedBox(height: 16),
+                    Text(
+                      'EDUCATE ME',
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
                   ],
                 ),
-
-
               ],
             )
             ,

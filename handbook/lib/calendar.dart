@@ -44,44 +44,49 @@ class _CalendarPageState extends State<CalendarPage> {
 
           centerTitle: true,
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
 
-            children: [
-              Container(
-                width: width,
-                //height: height *0.1,
-                padding: EdgeInsets.all(12.0),
-                alignment: Alignment.center,
+          children: [
+            Container(
+              width: width,
+              //height: height *0.1,
+              padding: EdgeInsets.all(12.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Welcome To My Calendar',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,),
 
               ),
+            ),
 
-              //SizedBox(height: 3.0,),
+            //SizedBox(height: 3.0,),
 
-              TableCalendar(
+            TableCalendar(
 
-                calendarFormat: _calendarFormat,
-                focusedDay: _focusedDay,
-                firstDay: _firstDay,
-                lastDay: _lastDay,
-                rangeSelectionMode: _rangeSelectionMode,
-                selectedDayPredicate: (day) {
-                  return isSameDay(_selectedDay, day);
-                },
-                onDaySelected: (selectedDay, focusedDay) {
-                  setState(() {
-                    _selectedDay = selectedDay;
-                    _focusedDay = focusedDay;
-                  });
-                },
-                onRangeSelected: (startDay, endDay, focusedDay) {
-                  setState(() {
-                    _focusedDay = focusedDay;
-                  });
-                },
-              ),
+              calendarFormat: _calendarFormat,
+              focusedDay: _focusedDay,
+              firstDay: _firstDay,
+              lastDay: _lastDay,
+              rangeSelectionMode: _rangeSelectionMode,
+              selectedDayPredicate: (day) {
+                return isSameDay(_selectedDay, day);
+              },
+              onDaySelected: (selectedDay, focusedDay) {
+                setState(() {
+                  _selectedDay = selectedDay;
+                  _focusedDay = focusedDay;
+                });
+              },
+              onRangeSelected: (startDay, endDay, focusedDay) {
+                setState(() {
+                  _focusedDay = focusedDay;
+                });
+              },
+            ),
 
+            
+            SizedBox(height: 68,),
 
             Container(
               color: Colors.deepPurple,
@@ -189,8 +194,7 @@ class _CalendarPageState extends State<CalendarPage> {
               ,
             ),
 
-            ],
-          ),
+          ],
         ),
      ),
 );

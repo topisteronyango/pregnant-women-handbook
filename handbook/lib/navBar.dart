@@ -78,8 +78,6 @@ class NavBar extends StatelessWidget {
             title: Text('Postnatal'),
             onTap: () => null,
           ),
- 
-// CALENDAR PAGE LINK
 
           ListTile(
             title: Text('My Calendar'),
@@ -99,5 +97,3 @@ class NavBar extends StatelessWidget {
 
   }
 }
-
-
