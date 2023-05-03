@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:handbook/calendar.dart';
+import 'package:handbook/postnatal.dart';
 import 'navBar.dart';
 import 'starch.dart';
 import 'proteins.dart';
@@ -151,7 +153,10 @@ class DietPage extends StatelessWidget {
 
           SizedBox(height: 70,),
 
-          Container(
+      Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
             color: Colors.deepPurple,
             height: 195,
 
@@ -183,11 +188,21 @@ class DietPage extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Image.asset(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => PostnatalPage()),
+                        );
+                      },
+                      child: Image.asset(
                       'assets/Images/pregnancy.png',
                       width: 100,
                       height: 100,
                     ),
+                    ),
+                    
+                    
                     SizedBox(height: 16),
                     Text(
                       'PREGNANCY TRACKER',
@@ -199,11 +214,20 @@ class DietPage extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Image.asset(
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CalendarPage()),
+                        );
+                      },
+                      child: Image.asset(
                       'assets/Images/calendar.png',
                       width: 100,
                       height: 100,
                     ),
+                    ),
+                                        
                     SizedBox(height: 16),
                     Text(
                       'MY CALENDAR',
@@ -217,9 +241,10 @@ class DietPage extends StatelessWidget {
             )
             ,
           ),
+
+            )
+      )
         ],
-
-
       ),
     );
   }

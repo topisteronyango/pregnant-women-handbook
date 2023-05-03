@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:handbook/calendar.dart';
 import 'navBar.dart';
 import 'manage_emotional_imbalances.dart';
 import 'healthyFood.dart';
 import 'package:handbook/generalSelfCare.dart';
+
+import 'postnatal.dart';
 
 class EducateMePage extends StatelessWidget {
   @override
@@ -104,8 +107,11 @@ class EducateMePage extends StatelessWidget {
 
 
           SizedBox(height: 100,),
-
-          Container(
+      
+      Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
             color: Colors.deepPurple,
             height: 195,
 
@@ -127,7 +133,7 @@ class EducateMePage extends StatelessWidget {
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'PREGNANCY \n TRACKER',
+                      'PREGNANCY \n CARE TIPS',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -137,14 +143,24 @@ class EducateMePage extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
-                    ),
+                   GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PostnatalPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/Images/pregnancy.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     SizedBox(height: 16),
                     Text(
-                      'PREGNANCY TRACKER',
+                      'PREGNANCY \n CARE TIPS',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),
@@ -153,14 +169,24 @@ class EducateMePage extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/book.png',
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>CalendarPage()),
+                        );
+                      },
+                      child:    Image.asset(
+                      'assets/Images/calendar.png',
                       width: 100,
                       height: 100,
                     ),
+                    
+                    ),
+                 
                     SizedBox(height: 16),
                     Text(
-                      'EDUCATE ME',
+                      'CALENDER',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),
@@ -171,9 +197,10 @@ class EducateMePage extends StatelessWidget {
             )
             ,
           ),
+              )
+              )
+
         ],
-
-
       ),
     );
   }

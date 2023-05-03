@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:handbook/aboutus.dart';
+import 'package:handbook/diet.dart';
+import 'package:handbook/postnatal.dart';
 import 'navBar.dart';
 import 'comsymptoms.dart';
 import 'warnsymptoms.dart';
@@ -15,19 +18,23 @@ class SymptomPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
                 "Look at some of the symptoms you are experiencing on this page... ",
-                style: TextStyle(fontSize: 18,),
+                style: TextStyle(
+                  fontSize: 18,
+                ),
               ),
             ),
-
-            SizedBox(height: 20,),
-
+            SizedBox(
+              height: 20,
+            ),
             OutlinedButton(
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ComSymp()),
@@ -36,27 +43,21 @@ class SymptomPage extends StatelessWidget {
               child: Text(
                 'LIST OF COMMON PREGNANCY SYMPTOMS',
                 style: TextStyle(fontSize: 16.0, color: Colors.white),
-
               ),
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.pinkAccent),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                        side: BorderSide(color: Colors.red),
-                      )
-                  )
-              ),
-
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.red),
+                  ))),
             ),
-
-            SizedBox(height: 35,),
-
-
-
-
+            SizedBox(
+              height: 35,
+            ),
             OutlinedButton(
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => WarnSymp()),
@@ -65,23 +66,21 @@ class SymptomPage extends StatelessWidget {
               child: Text(
                 'VIEW WARNING PREGNANCY SYMPTOMS',
                 style: TextStyle(fontSize: 16.0, color: Colors.white),
-
               ),
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.pinkAccent),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                        side: BorderSide(color: Colors.red),
-                      )
-                  )
-              ),
-
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.red),
+                  ))),
             ),
-            SizedBox(height: 35,),
-
+            SizedBox(
+              height: 35,
+            ),
             OutlinedButton(
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => NewSymp()),
@@ -90,46 +89,46 @@ class SymptomPage extends StatelessWidget {
               child: Text(
                 'ADD NEW SYMPTOM',
                 style: TextStyle(fontSize: 16.0, color: Colors.white),
-
               ),
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.pinkAccent),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                        side: BorderSide(color: Colors.red),
-                      )
-                  )
-              ),
-
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.red),
+                  ))),
             ),
-
-
-            SizedBox(height: 80,),
-
+            SizedBox(
+              height: 80,
+            ),
             Container(
               color: Colors.deepPurple,
               height: 195,
-
               padding: EdgeInsets.all(16),
-
-
-
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Column(
-
                     children: [
-                      Image.asset(
-                        'assets/Images/pregnancy.png',
-                        width: 100,
-                        height: 100,
-                        fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PostnatalPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/Images/pregnancy.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       SizedBox(height: 16),
                       Text(
-                        'PREGNANCY \n TRACKER',
+                        'POSTNATAL \n TIPS',
                         style: TextStyle(
                             fontSize: 8,
                             fontWeight: FontWeight.bold,
@@ -139,43 +138,61 @@ class SymptomPage extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Image.asset(
-                        'assets/Images/advice.png',
-                        width: 100,
-                        height: 100,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AboutUsPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/Images/advice.png',
+                          width: 100,
+                          height: 100,
+                        ),
                       ),
                       SizedBox(height: 16),
                       Text(
-                        'PREGNANCY TRACKER',
-                        style: TextStyle(fontSize: 8,
+                        'ABOUT US',
+                        style: TextStyle(
+                          fontSize: 8,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,),
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
                   Column(
                     children: [
-                      Image.asset(
-                        'assets/Images/diet.png',
-                        width: 100,
-                        height: 100,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DietPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/Images/diet.png',
+                          width: 100,
+                          height: 100,
+                        ),
                       ),
                       SizedBox(height: 16),
                       Text(
                         'DIET',
-                        style: TextStyle(fontSize: 8,
+                        style: TextStyle(
+                          fontSize: 8,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,),
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
                 ],
-              )
-              ,
+              ),
             ),
           ],
-
-
         ),
       ),
     );
