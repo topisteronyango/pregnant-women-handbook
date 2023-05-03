@@ -42,6 +42,8 @@ dependencies:
   geocoding: any
   flutter_map: ^3.0.0
   hidden_drawer_menu: ^3.0.1
+  webview_flutter: ^2.0.13 
+
 
 
   # The following adds the Cupertino Icons font to your application.

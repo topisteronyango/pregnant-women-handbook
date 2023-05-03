@@ -151,7 +151,10 @@ class DietPage extends StatelessWidget {
 
           SizedBox(height: 70,),
 
-          Container(
+      Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
             color: Colors.deepPurple,
             height: 195,
 
@@ -217,9 +220,10 @@ class DietPage extends StatelessWidget {
             )
             ,
           ),
+
+            )
+      )
         ],
-
-
       ),
     );
   }
