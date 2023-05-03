@@ -51,7 +51,11 @@ class PostnatalPage extends StatelessWidget {
 
           SizedBox(height: 100,),
 
-          Container(
+
+            Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
             color: Colors.deepPurple,
             height: 195,
             padding: EdgeInsets.all(16),
@@ -153,13 +157,14 @@ class PostnatalPage extends StatelessWidget {
 
 
               ],
+            ),
+            
+            ),
             )
-            ,
-          ),
+        )
+
+          
         ],
-
-
-
 
       ),
     );

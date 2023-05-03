@@ -127,14 +127,13 @@ class ExercisePage extends StatelessWidget {
 
           SizedBox(height: 100,),
 
-          Container(
+                  Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
             color: Colors.deepPurple,
             height: 195,
-
             padding: EdgeInsets.all(16),
-
-
-
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -232,6 +231,10 @@ class ExercisePage extends StatelessWidget {
             )
             ,
           ),
+)
+)
+
+          
         ],
 
 

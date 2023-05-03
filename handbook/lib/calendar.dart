@@ -60,8 +60,6 @@ class _CalendarPageState extends State<CalendarPage> {
               ),
             ),
 
-            //SizedBox(height: 3.0,),
-
             TableCalendar(
 
               calendarFormat: _calendarFormat,
@@ -86,11 +84,15 @@ class _CalendarPageState extends State<CalendarPage> {
             ),
 
             
-            SizedBox(height: 68,),
+            SizedBox(height: 20,),
 
+        Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child:     
             Container(
               color: Colors.deepPurple,
-              height: 195,
+              height: 160,
               padding: EdgeInsets.all(16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -193,10 +195,13 @@ class _CalendarPageState extends State<CalendarPage> {
               )
               ,
             ),
-
+            )
+        )
           ],
         ),
      ),
 );
 }
 }
+ 
+ 

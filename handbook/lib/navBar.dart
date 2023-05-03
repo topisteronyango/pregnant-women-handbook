@@ -11,6 +11,7 @@ import 'exercise.dart';
 import 'socialSupport.dart';
 import 'prenatal.dart';
 import 'postnatal.dart';
+import 'logout.dart';
 
 
 class NavBar extends StatelessWidget {
@@ -181,6 +182,25 @@ class NavBar extends StatelessWidget {
               );
             },
           ),
+
+//LOGOUT PAGE LINK
+
+          ListTile(
+            title: Text('Logout'),
+            leading: Image.asset(
+              'assets/Images/logout.png',
+              height: 20,
+              width: 20,
+            ),
+            onTap: () async {
+              SharedPreferences prefs = await SharedPreferences.getInstance();
+              prefs.remove('email');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LogoutPage()),
+              );
+            },
+          ),          
 
         ],
       ),
