@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:handbook/calendar.dart';
-import 'package:handbook/postnatal.dart';
-import 'navBar.dart';
 import 'starch.dart';
 import 'proteins.dart';
 import 'diary.dart';
 import 'snacks.dart';
 import 'fruitsVeges.dart';
+import 'symptom.dart';
+import 'exercise.dart';
 
 class DietPage extends StatelessWidget {
   @override
@@ -167,32 +167,44 @@ class DietPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Column(
 
+// MY EXERCISES PAGE LINK
+                
+             Column(
                   children: [
-                    Image.asset(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ExercisePage()),
+                        );
+                      },
+                      child: Image.asset(
                       'assets/Images/meditation.png',
                       width: 100,
                       height: 100,
-                      fit: BoxFit.cover,
                     ),
+                    ),
+                    
+                    
                     SizedBox(height: 16),
                     Text(
-                      'MY EXERCISES',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                      'PREGNANCY TRACKER',
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
                   ],
                 ),
+
+//SYMPTOMS PAGE LINK       
                 Column(
                   children: [
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => PostnatalPage()),
+                          MaterialPageRoute(builder: (context) => SymptomPage()),
                         );
                       },
                       child: Image.asset(
@@ -212,6 +224,9 @@ class DietPage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+// CALENDAR PAGE LINK                 
+
                 Column(
                   children: [
                     GestureDetector(

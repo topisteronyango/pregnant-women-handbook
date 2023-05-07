@@ -95,7 +95,7 @@ class PrenatalPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     const Text(
-                      'CALENDER',
+                      'POST NATAL TIPS',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,
@@ -156,7 +156,7 @@ class PrenatalPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     const Text(
-                      'PREGNANCY TRACKER',
+                      'MY CALENDAR',
                       style: TextStyle(
                           fontSize: 8,
                           fontWeight: FontWeight.bold,

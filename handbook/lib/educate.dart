@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:handbook/calendar.dart';
-import 'navBar.dart';
 import 'manage_emotional_imbalances.dart';
 import 'healthyFood.dart';
 import 'package:handbook/generalSelfCare.dart';
-
-import 'postnatal.dart';
+import 'symptom.dart';
+import 'prenatal.dart';
 
 class EducateMePage extends StatelessWidget {
   @override
@@ -114,33 +113,14 @@ class EducateMePage extends StatelessWidget {
               child: Container(
             color: Colors.deepPurple,
             height: 195,
-
             padding: EdgeInsets.all(16),
-
-
-
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Column(
 
-                  children: [
-                    Image.asset(
-                      'assets/Images/social-care.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(height: 16),
-                    Text(
-                      'PREGNANCY \n CARE TIPS',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                  ],
-                ),
+
+//  PRENATAL CARE TIPS PAGE LINK 
+
                 Column(
                   children: [
                    GestureDetector(
@@ -148,7 +128,37 @@ class EducateMePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => PostnatalPage()),
+                                builder: (context) => PrenatalPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/Images/social-care.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    SizedBox(height: 16),
+                    Text(
+                      'PRENATAL CARE TIPS',
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
+                    ),
+                  ],
+                ),
+
+
+ //  SYMPTOMS PAGE LINK
+
+                Column(
+                  children: [
+                   GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SymptomPage()),
                           );
                         },
                         child: Image.asset(
@@ -160,13 +170,16 @@ class EducateMePage extends StatelessWidget {
                       ),
                     SizedBox(height: 16),
                     Text(
-                      'PREGNANCY \n CARE TIPS',
+                      'PREGNANCY SYMPTOMS',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),
                     ),
                   ],
                 ),
+
+// CALENDAR PAGE LINK
+
                 Column(
                   children: [
                     GestureDetector(
@@ -193,6 +206,7 @@ class EducateMePage extends StatelessWidget {
                     ),
                   ],
                 ),
+
               ],
             )
             ,

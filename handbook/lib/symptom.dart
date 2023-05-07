@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:handbook/aboutus.dart';
 import 'package:handbook/diet.dart';
 import 'package:handbook/postnatal.dart';
+import 'package:handbook/prenatal.dart';
 import 'navBar.dart';
 import 'comsymptoms.dart';
 import 'warnsymptoms.dart';
@@ -109,6 +110,8 @@ class SymptomPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
+
+// PRENATAL PAGE LINK                
                   Column(
                     children: [
                       GestureDetector(
@@ -116,7 +119,7 @@ class SymptomPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => PostnatalPage()),
+                                builder: (context) => PrenatalPage()),
                           );
                         },
                         child: Image.asset(
@@ -128,7 +131,7 @@ class SymptomPage extends StatelessWidget {
                       ),
                       SizedBox(height: 16),
                       Text(
-                        'POSTNATAL \n TIPS',
+                        'PRENATAL \n TIPS',
                         style: TextStyle(
                             fontSize: 8,
                             fontWeight: FontWeight.bold,
@@ -136,6 +139,8 @@ class SymptomPage extends StatelessWidget {
                       ),
                     ],
                   ),
+
+//ABOUT US PAGE LINK                  
                   Column(
                     children: [
                       GestureDetector(
@@ -163,6 +168,9 @@ class SymptomPage extends StatelessWidget {
                       ),
                     ],
                   ),
+
+
+// DIET PAGE LINK
                   Column(
                     children: [
                       GestureDetector(
@@ -189,6 +197,8 @@ class SymptomPage extends StatelessWidget {
                       ),
                     ],
                   ),
+
+
                 ],
               ),
             ),

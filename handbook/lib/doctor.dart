@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'navBar.dart';
-import 'socialSupport.dart';
 import 'symptom.dart';
 import 'educate.dart';
 import 'maps.dart';
@@ -23,12 +21,8 @@ class MyAppointmentsPage extends StatelessWidget {
             ),
           ),
           OutlinedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => NavBar()),
-              );
-            },
+            onPressed: null,
+            // },
             child: Text(
               'Tel: +250 788 641 2763',
               style: TextStyle(fontSize: 16.0, color: Colors.white),
@@ -46,12 +40,7 @@ class MyAppointmentsPage extends StatelessWidget {
             height: 14,
           ),
           OutlinedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => NavBar()),
-              );
-            },
+            onPressed: null,
             child: Text(
               'Email: support@pwh.rw',
               style: TextStyle(fontSize: 16.0, color: Colors.white),
@@ -68,38 +57,26 @@ class MyAppointmentsPage extends StatelessWidget {
           SizedBox(
             height: 14,
           ),
-          // OutlinedButton(
-          //   onPressed: () {
-          //     _launchURL('https://www.youtube.com/watch?v=SZ7GasMDTuk');
-          //   },
-          //   child: Text(
-          //     'Book Appointment',
-          //     style: TextStyle(fontSize: 16.0, color: Colors.white),
-          //   ),
-          //   style: ButtonStyle(
-          //       backgroundColor:
-          //           MaterialStateProperty.all<Color>(Colors.pinkAccent),
-          //       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          //           RoundedRectangleBorder(
-          //         borderRadius: BorderRadius.circular(18.0),
-          //         side: BorderSide(color: Colors.red),
-          //       ))),
-          // ),
-          
+
 
           SizedBox(
             height: 55,
           ),
+
           Expanded(
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
+              child: 
+              Container(
                 color: Colors.deepPurple,
                 height: 180,
                 padding: EdgeInsets.all(16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+
+
+// MAPS PAGE LINK                    
                     Column(
                       children: [
                         GestureDetector(
@@ -127,41 +104,66 @@ class MyAppointmentsPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Column(
-                      children: [
-                        Image.asset(
+
+ //  SYMPTOMS PAGE LINK
+
+                Column(
+                  children: [
+                   GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SymptomPage()),
+                          );
+                        },
+                        child: Image.asset(
                           'assets/Images/pregnancy.png',
                           width: 100,
                           height: 100,
+                          fit: BoxFit.cover,
                         ),
-                        SizedBox(height: 16),
-                        Text(
-                          'PREGNANCY TRACKER',
-                          style: TextStyle(
-                            fontSize: 8,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                      ),
+                    SizedBox(height: 16),
+                    Text(
+                      'PREGNANCY SYMPTOMS',
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
-                    Column(
-                      children: [
-                        Image.asset(
+                  ],
+                ),
+
+ //  EDUCATE ME PAGE LINK
+
+                Column(
+                  children: [
+                   GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => EducateMePage()),
+                          );
+                        },
+                        child: Image.asset(
                           'assets/Images/book.png',
                           width: 100,
                           height: 100,
+                          fit: BoxFit.cover,
                         ),
-                        SizedBox(height: 16),
-                        Text(
-                          'EDUCATE ME',
-                          style: TextStyle(
-                              fontSize: 8,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                      ],
+                      ),
+                    SizedBox(height: 16),
+                    Text(
+                      'EDUCATE ME ',
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
+                  ],
+                ),
+
+
                   ],
                 ),
               ),
@@ -174,11 +176,5 @@ class MyAppointmentsPage extends StatelessWidget {
     );
   }
 
-  // void _launchURL(String url) async {
-  //   if (await canLaunch(url)) {
-  //     await launch(url);
-  //   } else {
-  //     throw 'Could not launch $url';
-  //   }
-  // }
+
 }

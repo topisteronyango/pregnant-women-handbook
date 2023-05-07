@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:handbook/calendar.dart';
 import 'package:handbook/eveningExercise.dart';
 import 'morningExercise.dart';
 import 'afternoonExe.dart';
 import 'eveningExercise.dart';
+import 'symptom.dart';
+import 'diet.dart';
 
 class ExercisePage extends StatelessWidget {
   @override
@@ -99,7 +102,7 @@ class ExercisePage extends StatelessWidget {
 
 
 
-          SizedBox(height: 158,),
+           SizedBox(height: 100,),
 
                   Expanded(
             child: Align(
@@ -111,48 +114,82 @@ class ExercisePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Column(
 
-                  children: [
-                    Image.asset(
-                      'assets/Images/meditation.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(height: 16),
-                    Text(
-                      'MY EXERCISES',
-                      style: TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                  ],
-                ),
+// DIET PAGE LINK                
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/pregnancy.png',
-                      width: 100,
-                      height: 100,
-                    ),
+                   GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DietPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/Images/diet.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     SizedBox(height: 16),
                     Text(
-                      'PREGNANCY TRACKER',
+                      'MY DIET',
                       style: TextStyle(fontSize: 8,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,),
                     ),
                   ],
                 ),
+
+ //  SYMPTOMS PAGE LINK
+
                 Column(
                   children: [
-                    Image.asset(
-                      'assets/Images/calendar.png',
-                      width: 100,
-                      height: 100,
+                   GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SymptomPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/Images/pregnancy.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    SizedBox(height: 16),
+                    Text(
+                      'PREGNANCY SYMPTOMS',
+                      style: TextStyle(fontSize: 8,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,),
                     ),
+                  ],
+                ),
+
+//CALENDAR PAGE LINK
+                Column(
+                  children: [
+                   GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CalendarPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/Images/calendar.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     SizedBox(height: 16),
                     Text(
                       'MY CALENDAR',
@@ -162,14 +199,14 @@ class ExercisePage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+
               ],
             )
             ,
           ),
 )
 )
-
-          
         ],
 
 
